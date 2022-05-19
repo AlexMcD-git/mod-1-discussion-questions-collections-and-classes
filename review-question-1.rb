@@ -62,7 +62,18 @@ pokemon = [
 
 
 # How would you get the url for Bulbasaur's ability?
+# puts pokemon[0][:abilities][0][:ability][:url]
+
 # How would you return the first pokemon with base experience over 40?
+
+pp pokemon.each {|p|
+        if p[:base_experience] > 40
+            return p[:name]
+        end
+}
+
+
+
 # How would you return ALL OF THE pokemon with base experience over 40? (Gotta catch em all)
 # How would you return an array of all of the pokemon's names?
 # How would you determine whether or not the pokemon array contained any pokemon with a weight greater than 60?
